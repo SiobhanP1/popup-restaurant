@@ -33,7 +33,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['8000-siobhanp1-popuprestaura-s4d1akix6mj.ws-eu101.gitpod.io', 
                 'popup-restaurant-booking.herokuapp.com', 
-                'localhost']
+                'popup-restaurant-booking-6b35de1eb8e5.herokuapp.com',
+                'localhost',]
 
 
 # Application definition
