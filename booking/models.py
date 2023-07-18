@@ -20,4 +20,13 @@ class Booking(models.Model):
         ordering = ['-booked_on']
 
     def __str__(self):
-        return self.title
+        return self.event
+
+
+class Event(models.Model):
+
+    event_name = models.CharField(max_length=100)
+    created_on = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name
