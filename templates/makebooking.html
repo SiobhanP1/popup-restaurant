@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Book a Table</h1>
+
+<!--Change action url?-->
+<form method="POST" action="{% url 'make_booking' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div>
+        <button type="submit">Book</button>
+    </div>
+
+
+</form> 
+
+{% endblock %}
