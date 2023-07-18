@@ -3,4 +3,14 @@
 {% block content %}
 <h1>Home Page</h1>
 
-{% endblock content %}
+{% if request.user.is_authenticated %}
+
+<p><a href="{% url 'account_logout' %}">Log Out</a></p>
+
+{% else %}
+
+<p>Log in to book a table</p>
+
+{% endif %}
+
+{% endblock %}
