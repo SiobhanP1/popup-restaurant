@@ -1,9 +1,15 @@
 {% extends "base.html" %}
 
-{% block homecontent %}
-<h1>Home Page</h1>
+{% block content %}
+<div>
+    <h1>Pop-Up Restaurant</h1>
+</div>
+<div>
+    <h2>Next event</h2>
+    <p><button>Book now</button></p>
+</div>
 
-{% if request.user.is_authenticated %}
+{% if user.is_authenticated %}
 
 <p><a href="{% url 'account_logout' %}">Log Out</a></p>
 

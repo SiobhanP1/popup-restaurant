@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <title>Document</title>
+    <title>Pop-Up Restaurant</title>
 </head>
 
 <body>
@@ -15,16 +15,13 @@
         <ul>
             <li><a href="{% url 'home' %}">Home</a></li>
             <li><a href="{% url 'account_login' %}">Log-in</a></li>
+            <li><a href="{% url 'account_logout' %}">Log-out</a></li>
+            <li><a href="{% url 'my_bookings' %}">My Bookings</a></li>
         </ul>
     </nav>
     <section>
-        <div>
-            <h1>Pop-Up Restaurant</h1>
-        </div>
-        <div>
-            <h2>Next event</h2>
-            <p><button>Book now</button></p>
-        </div>
+        {% block content %}
+        {% endblock %}
     </section>
     <footer>
         <p>Contact us at 098 123 4567.</p>
