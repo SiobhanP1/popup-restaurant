@@ -6,10 +6,12 @@
 
 <ul>
     {% for booking in booking_list %}
-    <li>{{ booking.event }}</li>
-    <li>{{ booking.booked_on }}</li>
-    <li>{{ booking.guest }}</li>
-    <li>{{ booking.num_of_guests }}</li>
+    <li>Event: {{ booking.event }}</li>
+    <li>Event Date & Time: {{ booking.event_date }}</li>
+    <li>Booked on: {{ booking.booked_on }}</li>
+    <li>Booked by: {{ booking.guest }}</li>
+    <li>Number of guests: {{ booking.num_of_guests }}</li>
+    <p><button><a href="">Edit</a></button></p>
     <hr>
     {% empty %}
     <li>You do not have any bookings.</li>

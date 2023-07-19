@@ -13,7 +13,9 @@ class Booking(models.Model):
     last_edited = models.DateTimeField(auto_now = True)
     num_of_guests = models.IntegerField(choices=NUMBER_OF_GUESTS, default=1)
     booking_status = models.IntegerField(choices=STATUS, default=1)
-    event = models.CharField(max_length=100)
+    event = "Green Gardens"
+    event_date = "August 30th, 7-9pm"
+    #event = models.CharField(max_length=100)
 
     
     class Meta:
