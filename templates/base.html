@@ -14,10 +14,13 @@
 </head>
 
 <body>
-    <nav class="navbar">
-        <a href="{% url 'home' %}" class="navbar-brand">Home</a>
+    <!--Navigation bar at top of page: Add fixed top class-->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <a href="{% url 'home' %}" class="navbar-brand">Home</a>
+        </div>
         <div class="">
-            <ul class="navbar-nav">
+            <ul class="nav navbar-nav navbar-right">
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'home' %}">Home</a>
                 </li>
@@ -32,7 +35,7 @@
                     <a class="nav-link" href="{% url 'account_logout' %}">Log Out</a>
                 </li>
                 {% else %}
-                <li class="nav-item">
+                <li class="nav-item list-inline-item">
                     <a class="nav-link" href="{% url 'account_login' %}">Log In</a>
                 </li>
                 {% endif %}

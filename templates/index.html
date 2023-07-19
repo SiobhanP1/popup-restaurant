@@ -6,20 +6,30 @@
 
         <div class="col-sm-8 mx-auto">
             <div>
-                <h1>Pop-Up Restaurant</h1>
-                <p>Next event</p>
+                <h1 class="display-1">Pop-Up Restaurant</h1>
+                <p class="lead">Local, seasonal dishes cooked by well-known chefs in beautiful locations</p>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Next Event: Green Square Gardens, August 20th 6-8pm</h5>
+                    <p class="card-text">
+                        Back by popular demand. Join Chef Anthony for a very special seafood menu by the sea. €30 per
+                        person. Places limited. Book early to avoid disappointment.
+                    </p>
+                    {% if user.is_authenticated %}
+                    <div>
+                        <button class="btn btn-success"><a href="{% url 'make_booking' %}">Book Now</a></button>
+                    </div>
+                    {% else %}
+                    <p>Log in to book a table</p>
+                    <div>
+                        <button class="btn btn-primary"><a href="{% url 'account_login' %}">Log In</a></button>
+                    </div>
+                    {% endif %}
+                </div>
             </div>
 
-            {% if user.is_authenticated %}
-            <div>
-                <button class="btn btn-success"><a href="{% url 'make_booking' %}">Book Now</a></button>
-            </div>
-            {% else %}
-            <p>Log in to book a table</p>
-            <div>
-                <button class="btn btn-primary"><a href="{% url 'account_login' %}">Log In</a></button>
-            </div>
-            {% endif %}
+
         </div>
     </div>
 </div>
