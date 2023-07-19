@@ -11,7 +11,8 @@
     <li>Booked on: {{ booking.booked_on }}</li>
     <li>Booked by: {{ booking.guest }}</li>
     <li>Number of guests: {{ booking.num_of_guests }}</li>
-    <p><button><a href="">Edit</a></button></p>
+    <li><button><a href="{% url 'edit_booking' booking.id %}">Edit</a></button></li>
+    <li><button><a href="{% url 'cancel_booking' booking.id %}">Cancel</a></button></li>
     <hr>
     {% empty %}
     <li>You do not have any bookings.</li>

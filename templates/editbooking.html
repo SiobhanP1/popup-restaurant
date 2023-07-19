@@ -2,8 +2,21 @@
 
 {% block content %}
 
-<h1>Edit Your Booking</h1>
+<h1>Edit Booking</h1>
+
+<!--Change action url?-->
+<form method="POST">
+    <p>This booking form is for the CURRENT_EVENT_NAME event.</p>
+    <p>Please enter the number of guests. Note that a maximum of four 
+        guests is allowed per booking.
+    </p>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div>
+        <button type="submit">Update</button>
+    </div>
 
 
+</form> 
 
 {% endblock %}

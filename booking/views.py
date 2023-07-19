@@ -2,8 +2,7 @@ from django.shortcuts import render, get_object_or_404 # remove?
 from django.views import View, generic
 from .models import Event, Booking
 from django.contrib.auth.mixins import LoginRequiredMixin
-#from .forms import MakeBookingForm
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib import messages
 from django.urls import reverse_lazy
 
@@ -28,7 +27,7 @@ class MakeBooking(LoginRequiredMixin, CreateView):
     model = Booking
     fields = ['num_of_guests']
     template_name = 'makebooking.html'
-    success_url = reverse_lazy("my_bookings")
+    success_url = reverse_lazy("success")
 
     def form_valid(self, form):
         form.instance.guest = self.request.user
@@ -36,13 +35,28 @@ class MakeBooking(LoginRequiredMixin, CreateView):
         return super(MakeBooking, self).form_valid(form)
     
 
-class ThankYou(LoginRequiredMixin, View):
+class EditBooking(LoginRequiredMixin, UpdateView):
 
-    template_name = 'thankyou.html'
+    model = Booking
+    fields = ['num_of_guests']
+    template_name = 'editbooking.html'
+    success_url = 'home'
+    #success_url = reverse_lazy('home')
+
+    def form_valid(self, form):
+        form.instance.guest = self.request.user
+        messages.success(self.request, "Successfully updated.")
+        return super(EditBooking, self).form_valid(form)
 
 
+class Success(View):
+
+    model = Booking
+    template_name = 'success.html'
 
 
+class CancelBooking(LoginRequiredMixin, DeleteView):
 
-
-
+    model = Booking
+    template_name = "cancelbooking.html"
+    success_url = reverse_lazy('bookings')
