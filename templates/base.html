@@ -14,10 +14,13 @@
     <nav>
         <ul>
             <li><a href="{% url 'home' %}">Home</a></li>
-            <li><a href="{% url 'account_login' %}">Log-in</a></li>
-            <li><a href="{% url 'account_logout' %}">Log-out</a></li>
+            {% if user.is_authenticated %}
             <li><a href="{% url 'my_bookings' %}">My Bookings</a></li>
             <li><a href="{% url 'make_booking' %}">Book a Table</a></li>
+            <li><a href="{% url 'account_logout' %}">Log Out</a></li>
+            {% else %}
+            <li><a href="{% url 'account_login' %}">Log In</a></li>
+            {% endif %}
         </ul>
     </nav>
     <section>

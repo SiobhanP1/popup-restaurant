@@ -6,7 +6,10 @@
 
 <!--Change action url?-->
 <form method="POST" action="{% url 'make_booking' %}">
-    <p>This booking form is for the <span>{{ Event.event_name }}</span> event.</s></p>
+    <p>This booking form is for the CURRENT_EVENT_NAME event.</p>
+    <p>Please enter the number of guests. Note that a maximum of four 
+        guests is allowed per booking.
+    </p>
     {% csrf_token %}
     {{ form.as_p }}
     <div>

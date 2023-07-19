@@ -3,20 +3,18 @@
 {% block content %}
 <div>
     <h1>Pop-Up Restaurant</h1>
-</div>
-<div>
-    <h2>Next event</h2>
-    <p><button>Book now</button></p>
+    <p>Next event</p>
 </div>
 
 {% if user.is_authenticated %}
-
-<p><a href="{% url 'account_logout' %}">Log Out</a></p>
-
+<div>
+    <button><a href="{% url 'make_booking' %}">Book Now</a></button>
+</div>
 {% else %}
-
 <p>Log in to book a table</p>
-
+<div>
+    <button><a href="{% url 'account_login' %}">Log In</a></button>
+</div>
 {% endif %}
 
 {% endblock %}

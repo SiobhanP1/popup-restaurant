@@ -24,6 +24,7 @@ class MakeBooking(LoginRequiredMixin, FormView):
 
     form_class = MakeBookingForm
     template_name = 'makebooking.html'
+    success_url = 'thank_you'
 
 
 
