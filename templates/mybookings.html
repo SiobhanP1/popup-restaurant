@@ -1,22 +1,24 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="container-fluid text-center">
+    <h1>My Bookings</h1>
 
-<h1>My Bookings</h1>
-
-<ul>
-    {% for booking in booking_list %}
-    <li>Event: {{ booking.event }}</li>
-    <li>Event Date & Time: {{ booking.event_date }}</li>
-    <li>Booked on: {{ booking.booked_on }}</li>
-    <li>Booked by: {{ booking.guest }}</li>
-    <li>Number of guests: {{ booking.num_of_guests }}</li>
-    <li><button><a href="{% url 'edit_booking' booking.id %}">Edit</a></button></li>
-    <li><button><a href="{% url 'cancel_booking' booking.id %}">Cancel</a></button></li>
-    <hr>
-    {% empty %}
-    <li>You do not have any bookings.</li>
-    {% endfor %}
-</ul>
-
+    <ul>
+        {% for booking in booking_list %}
+        <li>Event: {{ booking.event }}</li>
+        <li>Event Date & Time: {{ booking.event_date }}</li>
+        <li>Booked on: {{ booking.booked_on }}</li>
+        <li>Booked by: {{ booking.guest }}</li>
+        <li>Number of guests: {{ booking.num_of_guests }}</li>
+        <li>
+            <button><a href="{% url 'edit_booking' booking.id %}">Edit</a></button>
+            <button><a href="{% url 'cancel_booking' booking.id %}">Cancel</a></button>
+        </li>
+        <hr>
+        {% empty %}
+        <li>You do not have any bookings.</li>
+        {% endfor %}
+    </ul>
+</div>
 {% endblock %}

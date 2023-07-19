@@ -1,15 +1,15 @@
 from django.shortcuts import render, get_object_or_404 # remove?
 from django.views import View, generic
-from .models import Event, Booking
+from .models import Booking, Event
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib import messages
-from django.urls import reverse_lazy, reverse
+from django.urls import reverse_lazy
 
 
 class EventList(generic.ListView):
 
-    current_event = 'Green Square'
+    current_event = Event.event_name
     template_name = 'index.html'
     model = Event
 
@@ -27,7 +27,7 @@ class MakeBooking(LoginRequiredMixin, CreateView):
     model = Booking
     fields = ['num_of_guests']
     template_name = 'makebooking.html'
-    success_url = reverse_lazy("success")
+    success_url = reverse_lazy("bookings")
 
     def form_valid(self, form):
         form.instance.guest = self.request.user

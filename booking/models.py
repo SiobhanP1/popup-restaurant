@@ -16,7 +16,6 @@ class Booking(models.Model):
     booking_status = models.IntegerField(choices=STATUS, default=1)
     event = "Green Gardens"
     event_date = "August 30th, 7-9pm"
-    #event = models.CharField(max_length=100)
 
     
     class Meta:

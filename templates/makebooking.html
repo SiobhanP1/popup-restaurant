@@ -1,23 +1,20 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="container-fluid text-center">
+    <h1>Book a Table</h1>
 
+    <form method="POST">
+        <p>This booking form is for the CURRENT_EVENT_NAME event.</p>
+        <p>Please enter the number of guests. Note that a maximum of four
+            guests is allowed per booking.
+        </p>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div>
+            <button type="submit">Book</button>
+        </div>
 
-<h1>Book a Table</h1>
-
-<!--Change action url?-->
-<form method="POST" action="{% url 'make_booking' %}">
-    <p>This booking form is for the CURRENT_EVENT_NAME event.</p>
-    <p>Please enter the number of guests. Note that a maximum of four 
-        guests is allowed per booking.
-    </p>
-    {% csrf_token %}
-    {{ form.as_p }}
-    <div>
-        <button type="submit">Book</button>
-    </div>
-
-
-</form> 
-
+    </form>
+</div>
 {% endblock %}
