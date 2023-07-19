@@ -2,3 +2,22 @@ body {
     background-color: lightsteelblue;
 }
 
+footer {
+    margin-top: 3rem;
+    bottom: 0;
+    left: 0;
+}
+
+nav {
+    right: 0;
+}
+
+.card {
+    width: 18rem;
+}
+
+#main-heading {
+    margin-top: 2rem;
+
+}
+

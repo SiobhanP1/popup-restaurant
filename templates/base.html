@@ -15,17 +15,19 @@
 
 <body>
     <!--Navigation bar at top of page: Add fixed top class-->
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <a href="{% url 'home' %}" class="navbar-brand">Home</a>
-        </div>
+    <nav class="navbar navbar-expand-sm bg-light navbar-light">
         <div class="">
-            <ul class="nav navbar-nav navbar-right">
-                <li class="nav-item">
+            <a href="{% url 'home' %}" class="navbar-brand">Home</a>
+            <button type="button" data-toggle="collapse" data-target="#navDropDown" class="navbar-toggler ml-auto"
+                aria-controls="navDropDown" aria-expanded="false" aria-label="toggle navigation">Button</button>
+        </div>
+        <div class="collapse navbar-collapse" id="navDropDown">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item mr-2">
                     <a class="nav-link" href="{% url 'home' %}">Home</a>
                 </li>
                 {% if user.is_authenticated %}
-                <li class="nav-item">
+                <li class="nav-item mr-2">
                     <a class="nav-link" href="{% url 'bookings' %}">My Bookings</a>
                 </li>
                 <li class="nav-item">
@@ -46,8 +48,10 @@
         {% block content %}
         {% endblock %}
     </section>
-    <footer>
-        <p>Contact us at 098 123 4567.</p>
+    <footer class="footer page-footer footer-light-secondary">
+        <div class="container-fluid text-center">
+            <p>Contact us at 089 123 4567 or popuprestaurant@gmail.com</p>
+        </div>
     </footer>
 </body>
 
