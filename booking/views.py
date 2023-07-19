@@ -4,7 +4,7 @@ from .models import Event, Booking
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib import messages
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 
 
 class EventList(generic.ListView):
@@ -40,8 +40,7 @@ class EditBooking(LoginRequiredMixin, UpdateView):
     model = Booking
     fields = ['num_of_guests']
     template_name = 'editbooking.html'
-    success_url = 'home'
-    #success_url = reverse_lazy('home')
+    
 
     def form_valid(self, form):
         form.instance.guest = self.request.user

@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls import reverse
 
 
 NUMBER_OF_GUESTS = ((1, "One"), (2, "Two"), (3, "Three"), (4, "Four"))
@@ -23,6 +24,9 @@ class Booking(models.Model):
 
     def __str__(self):
         return self.event
+
+    def get_absolute_url(self):
+        return reverse('bookings')
 
 
 class Event(models.Model):
