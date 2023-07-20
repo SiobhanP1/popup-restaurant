@@ -171,6 +171,8 @@ ADD TEST CASE
 
 * Users must be logged in to access all create, edit, delete and view booking pages, however, it is possible to access other user's booking information by typing in the URL associated with their private pages. I did not yet manage to fix this.  
 
+* It is possible for the same user to book the same event multiple times. 
+
 ## Deployment
 
 ### Via Gitpod

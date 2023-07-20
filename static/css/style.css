@@ -20,7 +20,8 @@ footer {
 /* Cards on index.html */
 
 .card {
-    width: 18rem;
+    /*width: 18rem;*/
+    margin-top: 2rem;
 }
 
 /* Bookings list */

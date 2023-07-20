@@ -15,26 +15,56 @@
             <!--Section containing event cards-->
             <section>
                 <h2>Events</h2>
-                <div class="card mx-auto">
-                    <div class="card-body">
-                        <h5 class="card-title">Next Event: Green Square Gardens, August 20th 6-8pm</h5>
-                        <p class="card-text">
-                            Back by popular demand. Join Chef Anthony for a very special seafood menu by the sea. €30
-                            per
-                            person. Places limited. Book early to avoid disappointment.
-                        </p>
-                        {% if user.is_authenticated %}
-                        <div>
-                            <a href="{% url 'make_booking' %}">Book Now</a>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card mx-auto">
+                            <div class="card-body">
+                                <h5 class="card-title">Green Square Gardens, August 20th 6-8pm</h5>
+                                <p class="card-text">
+                                    Back by popular demand. Join Chef Anthony for a very special seafood menu by the
+                                    sea.
+                                    €30
+                                    per
+                                    person. Places limited. Book early to avoid disappointment.
+                                </p>
+                                {% if user.is_authenticated %}
+                                <div>
+                                    <a href="{% url 'make_booking' %}">Book Now</a>
+                                </div>
+                                {% else %}
+                                <p>Log in to book a table</p>
+                                <div>
+                                    <a href="{% url 'account_login' %}">Log In</a>
+                                </div>
+                                {% endif %}
+                            </div>
                         </div>
-                        {% else %}
-                        <p>Log in to book a table</p>
-                        <div>
-                            <a href="{% url 'account_login' %}">Log In</a>
+
+                        <div class="card mx-auto">
+                            <div class="card-body">
+                                <h5 class="card-title">Summer Wine Tasting, August 1st, 6-8pm</h5>
+                                <p class="card-text">
+                                    Back by popular demand. 
+                                    €30
+                                    per
+                                    person. Places limited. Book early to avoid disappointment.
+                                </p>
+                                {% if user.is_authenticated %}
+                                <div>
+                                    <a href="{% url 'make_booking' %}">Book Now</a>
+                                </div>
+                                {% else %}
+                                <p>Log in to book a table</p>
+                                <div>
+                                    <a href="{% url 'account_login' %}">Log In</a>
+                                </div>
+                                {% endif %}
+                            </div>
                         </div>
-                        {% endif %}
                     </div>
                 </div>
+
             </section>
         </div>
     </div>
