@@ -106,13 +106,12 @@ ADD CURRENT FEATURES WITH PICTURES
 
 ## Future Features
 
-* 
+* The Admin User will be able to add the number of seats when they create an event. If a user tries to book seats when there are no longer enough available, they will be added to a waiting list. 
 
 ## Data Model
 
 ### Booking Model
-* INSERT INFO HERE
-* BOOKING MODEL ATTRIBUTES: INSERT HERE
+* Attributes were added to the Booking model as follows: guest (logged-in user), event (a foreign key connecting a particular booking to a particular event), booked_on (the day and time of booking), last_edited_on (the day and time of the most recent change to the booking), num_of_guests (the number of people who will attend as part of the same booking). 
 
 ### Event Model
 
