@@ -35,19 +35,77 @@ ADD IMAGES ON DIFFERENT SCREEN SIZES.
 *
 
 ### Wireframes
+
+
 ### Typography and Color
+
+
 ### Accessibility
 
 INSERT HERE
 
 ## Features
 
+* Features were added to provide the user with CRUD (Create, Read, Update, Delete) functionality. After logging in, the user can create a booking, read/view it, update it and delete it. 
+* The admin user can create, read/view, update and delete bookings and events. 
+
 ADD CURRENT FEATURES WITH PICTURES
+### Home Page
+
+* The home page has a large title and shows any active or upcoming events. 
+
+### Navigation Bar
+
+* The navigation bar is located at the top of every page.
+* Logged-out users can see and click on two buttons: 'Home' and 'Log In'.
+* Logged-in users can see and click on four buttons: 'Home', 'My Bookings', 'Book a Table', and 'Log Out'.
+* 'Home' returns the user to the home page.
+* 'My Bookings' brings the user to a list of any bookings they have made.
+* 'Book a Table' brings the user to a form where they input information to book a table.
+* The navigation buttons collapse into one drop-down button on small screens. 
+
+### Sign In, Log in and Log out
+* The sign in, log in and log out pages use the templates provided by Django with a little modification.
+* The navigation bar options shown to the user change depending on whether a user is logged-in or logged-out. Users must be authenticated in order to make, view, edit or cancel bookings.
+* The sign in and log in form inputs use built-in Django validation to check that the user enters a suitable password and username. 
+ 
+### Home page
+* The home page features event information displayed on cards. 
+* If a user wishes to book an event, they can click on the 'Book now' button on the event card. If that user is not already logged in, they will be directed to a log in page. 
+
+### My Bookings
+* The details of any bookings made by the user are displayed in a list on the page.
+* There are two buttons under each booking: 'Edit' and 'Cancel'. 
+* Clicking on the 'Edit' button directs the user to the 'Edit booking' form.
+* Clicking on 'Cancel' directs the user to the 'Cancel booking' page.
+
+### Book a Table
+* The form on the 'Book a Table' page allows the user to book places at one of the pop-up restaurant events.
+* The user must be logged in to view this page.
+* A drop-down menu allows the user to select the number of guests in their group. 
+* Clicking 'Confirm' will bring the user back to the 'My Bookings' page.
+* An alert will show if their booking has been successful.
+
+### Edit Booking
+* The form on the 'Edit Booking' page allows the user to edit their booking.
+* The user can change the number of guests that will attend the event with them.
+* When the user clicks 'Submit', they are brought back to the 'My Bookings' page where an alert tells them that their booking has been successfully updated.
+
+### Cancel Booking 
+* There is a 'Cancel' button next to each booking listed on the 'My Bookings' page.
+* When a user clicks on 'Cancel', they are brought to the 'Cancel Booking' page where they can cancel their booking.
+* They are asked if they are sure about cancelling and are given the opportunity to click, 'Cancel' or 'No'.
+* After confirming, the user is redirected to the 'My Bookings' page.
 
 
-### Future Features
+### Admin Features
+* Admin staff for the restaurant can access the admin dashboard by adding '/admin' to the home page URL. 
+* On the dashboard, they have options to create, view, edit, and delete both bookings and events. 
+* They can also view, edit, create and delete user information.
 
-ADD FUTURE FEATURES HERE
+
+## Future Features
+
 * 
 
 ## Data Model
@@ -56,7 +114,7 @@ ADD FUTURE FEATURES HERE
 * INSERT INFO HERE
 * BOOKING MODEL ATTRIBUTES: INSERT HERE
 
-### OTHER MODEL/CLASS INFO HERE
+### Event Model
 
 
 
@@ -95,7 +153,7 @@ ADD INFORMATION HERE. INCLUDE SITE AND RESULTS.
 
 ### Test Cases
 ADD TEST CASE
-1. Open the live app. The user is shown a welcome message and club menu. The user notices that they are asked to select a club option.
+1. Open the live app. The user is shown... The user notices ...
 2. 
 
 ![Live version welcome message](docs/initial.png)
@@ -118,10 +176,12 @@ ADD TEST CASE
 
 ### Via Heroku
 
+CHECK AND ADD DEPLOYMENT PROCESS
+
 The program was deployed using Heroku by doing the following:
 
 1. Go to http://github.com.
-2. Open the 'SiobhanP1/tm-club-survey-analysis' repository.
+2. Open the 'SiobhanP1/popup-restaurant' repository.
 3. Go to https://www.heroku.com.
 4. Select 'Create app'.
 5. Give the app a unique name.

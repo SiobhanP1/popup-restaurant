@@ -7,26 +7,27 @@ h1 {
     margin-bottom: 1rem;
 }
 
+nav {
+    right: 0;
+}
+
 footer {
     margin-top: 3rem;
     bottom: 0;
     left: 0;
 }
 
-nav {
-    right: 0;
-}
+/* Cards on index.html */
 
 .card {
     width: 18rem;
 }
 
+/* Bookings list */
+
 li {
     list-style-type: none;
 }
 
-#main-heading {
-    margin-top: 2rem;
 
-}
 
