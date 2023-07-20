@@ -120,7 +120,7 @@ ADD CURRENT FEATURES WITH PICTURES
 ### Entity Relationship Diagram (ERD)
 
 REMOVE ONE DIAGRAM BELOW
-The Models user in this project were mapped out as in the Entity Relationship Diagram below.
+The Models used in this project were mapped out as in the Entity Relationship Diagram below.
 
 ![entity relationship diagram](static/images/erd-event-user-booking.png)
 ![entity relationship diagram2](static/images/erd-user-booking.png)
@@ -140,22 +140,26 @@ ADD TECHNOLOGY - CHECK INSTALLED PACKAGES IN REQUIREMENTS
 
 ### Code Validation
 NEED TO COMPLETE -PYTHON, CSS NOT COMPLETE
-* PYTHON: Code was passed through the [Code Institute Python Linter](https://pep8ci.herokuapp.com/) without any issues.
+
+* PYTHON: Code was passed through the [Code Institute Python Linter](https://pep8ci.herokuapp.com/). NOT COMPLETE YET
+
 * HTML: HTML code in the template files was validated using the [W3 Validator](https://validator.w3.org/nu/). No errors were found. 
-* CSS: 
+
+* CSS: NEED TO ADD
 
 ### Other Testing
 
-ADD INFORMATION HERE. INCLUDE SITE AND RESULTS.
+ADD INFORMATION HERE. INCLUDE SITES AND RESULTS.
 * Responsiveness: 
 * Cross-browser compatibility: 
+* This app was tested for responsiveness using the Google Chrome browser and Chrome DevTools. It has not yet been tested on other browsers.
 
 ### Test Cases
 ADD TEST CASE
 1. Open the live app. The user is shown... The user notices ...
 2. 
 
-![Live version welcome message](docs/initial.png)
+![Home page]()
 
 
 ### Fixed Bugs
