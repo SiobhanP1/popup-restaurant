@@ -23,7 +23,7 @@
         <ul>
             {% for booking in booking_list %}
             <li>Event: {{ booking.event }}</li>
-            <li>Event Date & Time: {{ booking.event_date }}</li>
+            <li>Event Date & Time: {{ booking.event.event_date }}</li>
             <li>Booked on: {{ booking.booked_on }}</li>
             <li>Booked by: {{ booking.guest }}</li>
             <li>Number of guests: {{ booking.num_of_guests }}</li>

@@ -8,8 +8,8 @@ admin.site.register(Event)
 
 class BookingAdmin(admin.ModelAdmin):
 
-    list_display = ('event', 'booked_on', 'guest', 'num_of_guests', 'status')
-    list_filter = ['status', 'event']
+    list_display = ('event', 'booked_on', 'guest', 'num_of_guests', 'booking_status')
+    list_filter = ['booking_status', 'event']
 
 
 class EventAdmin(admin.ModelAdmin):

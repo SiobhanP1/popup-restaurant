@@ -7,8 +7,7 @@ from django.utils import timezone
 
 NUMBER_OF_GUESTS = ((1, "One"), (2, "Two"), (3, "Three"), (4, "Four"))
 STATUS = ((1, "Confirmed"), (0, "Waiting list"))
-EVENT_NAME = "Green Gardens"
-EVENT_DATE = "August 30th, 7-9pm"
+
 
 class Event(models.Model):
 
@@ -21,6 +20,10 @@ class Event(models.Model):
         return self.event_name
 
 
+    def get_default_event():
+        return Event.objects.get_or_create(name="default")[0]
+
+
 class Booking(models.Model):
 
     guest = models.ForeignKey( User, on_delete = models.CASCADE, related_name = "bookings")
@@ -28,15 +31,14 @@ class Booking(models.Model):
     last_edited = models.DateTimeField(auto_now = True)
     num_of_guests = models.IntegerField(choices=NUMBER_OF_GUESTS, default=1)
     booking_status = models.IntegerField(choices=STATUS, default=1)
-    event = EVENT_NAME
-    event_date = EVENT_DATE
-    
+    #event = models.ForeignKey( Event, on_delete = models.CASCADE, related_name = "location", default=Event.get_default_event)
+    event = "Green Square Gardens"
     
     class Meta:
         ordering = ['-booked_on']
 
     def __str__(self):
-        return self.event
+        return f"{self.guest} booked {self.event.event_name}"
 
     def get_absolute_url(self):
         return reverse('bookings')

@@ -166,7 +166,10 @@ ADD TEST CASE
 * 
 
 ### Remaining Bugs
-* 
+
+* The 'event' attribute in the Booking model is a foreign key linking the Booking object to the Event object. I initially added it as a Foreign Key but needed to add a default value and did not succeed in doing so without creating a different error. (I attempted to use the `get_or_create` method to create the default value.) As a result, and until I can fix this bug, the 'event' attribute has the value "Green Square Gardens" and the event name is not editable through the admin dashboard.
+
+* Users must be logged in to access all create, edit, delete and view booking pages, however, it is possible to access other user's booking information by typing in the URL associated with their private pages. I did not yet manage to fix this.  
 
 ## Deployment
 
