@@ -4,17 +4,20 @@
 <div class="container-fluid text-center">
     <h1>Edit Booking</h1>
 
-    <!--Change action url?-->
-    <form method="POST">
-        <p>This booking form is for the CURRENT_EVENT_NAME event.</p>
-        <p>Please enter the number of guests. Note that a maximum of four
-            guests is allowed per booking.
-        </p>
-        {% csrf_token %}
-        {{ form.as_p }}
-        <div>
-            <button type="submit">Update</button>
-        </div>
-    </form>
+    <!--Section containing edit booking form-->
+    <section>
+        <h2>Please update your booking in the form below.</h2>
+        <form method="POST">
+            <p>Please note that this booking form is for the Green Square Gardens event.</p>
+            <p>Please enter the number of guests. Note that a maximum of four
+                guests is allowed per booking.
+            </p>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div>
+                <button type="submit">Update</button>
+            </div>
+        </form>
+    </section>
 </div>
 {% endblock %}

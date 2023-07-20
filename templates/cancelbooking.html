@@ -4,15 +4,19 @@
 <div class="container-fluid text-center">
     <h1>Cancel Your Booking</h1>
 
-    <div>
-        <form method="post">
-            {% csrf_token %}
-            <p>Are you sure that you would like to cancel your booking?</p>
-            <div>
-                <input type="submit" value="Confirm">
-                <button><a href="{% url 'bookings' %}">No</a></button>
-            </div>
-        </form>
-    </div>
+    <!--Section containing cancel booking option-->
+    <section>
+        <h2>Please select an option.</h2>
+        <div>
+            <form method="post">
+                {% csrf_token %}
+                <p>Are you sure that you would like to cancel your booking?</p>
+                <div>
+                    <input type="submit" value="Confirm">
+                    <a href="{% url 'bookings' %}">No</a>
+                </div>
+            </form>
+        </div>
+    </section>
 </div>
 {% endblock %}

@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <!--Navigation bar at top of page: Add fixed top class-->
+    <!--Navigation bar at top of page-->
     <nav class="navbar navbar-expand-sm bg-light navbar-light">
         <div class="">
             <a href="{% url 'home' %}" class="navbar-brand">Home</a>
@@ -50,6 +50,8 @@
         {% block content %}
         {% endblock %}
     </section>
+
+    <!--Footer for each page-->
     <footer class="footer page-footer footer-light-secondary">
         <div class="container-fluid text-center">
             <p>Contact us at 089 123 4567 or popuprestaurant@gmail.com</p>

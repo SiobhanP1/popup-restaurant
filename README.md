@@ -82,9 +82,9 @@ ADD TECHNOLOGY - CHECK INSTALLED PACKAGES IN REQUIREMENTS
 ## Testing
 
 ### Code Validation
-NEED TO COMPLETE
+NEED TO COMPLETE -PYTHON, CSS NOT COMPLETE
 * PYTHON: Code was passed through the [Code Institute Python Linter](https://pep8ci.herokuapp.com/) without any issues.
-* HTML: 
+* HTML: HTML code in the template files was validated using the [W3 Validator](https://validator.w3.org/nu/). No errors were found. 
 * CSS: 
 
 ### Other Testing
