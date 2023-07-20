@@ -1,8 +1,9 @@
 from django.contrib import admin
-from .models import Booking
+from .models import Booking, Event
 
 
 admin.site.register(Booking)
+admin.site.register(Event)
 
 
 class BookingAdmin(admin.ModelAdmin):
@@ -13,4 +14,5 @@ class BookingAdmin(admin.ModelAdmin):
 
 class EventAdmin(admin.ModelAdmin):
 
-    list_display = ('name', 'created_on')
+    list_display = ('event_name', 'created_on', 'event_date')
+    list_filter = ['event_name']

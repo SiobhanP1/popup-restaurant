@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
+import datetime
+from django.utils import timezone
 
 
 NUMBER_OF_GUESTS = ((1, "One"), (2, "Two"), (3, "Three"), (4, "Four"))
@@ -10,13 +12,13 @@ EVENT_DATE = "August 30th, 7-9pm"
 
 class Event(models.Model):
 
-    event_name = EVENT_NAME
-    event_date = EVENT_DATE
-    #created_on = models.DateTimeField(auto_now_add=True)
-    #event_name = models.CharField(max_length=100)
+    event_date = models.DateTimeField(default=timezone.localtime)
+    created_on = models.DateTimeField(auto_now_add=True)
+    event_name = models.CharField(max_length=100)
+
 
     def __str__(self):
-        return self.name
+        return self.event_name
 
 
 class Booking(models.Model):
