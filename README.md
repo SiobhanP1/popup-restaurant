@@ -3,29 +3,50 @@
 ## Purpose
 
 ADD PURPOSE INFO - INTERNAL AND EXTERNAL USER
-* The external user goal is to gain insights from the results of the survey.
-* The internal user goal is to provide insights leading to action from the survey data.
-* The site is targeted at Toastmasters International. It provides a way for the organisation to analyse member data including age, employment status, main goals for joining Toastmasters and level of satisfaction.
-* The program runs in the Code Institute mock terminal on Heroku.
+* The external user goal is to provide a way for people to carry out bookings for a pop-up restaurant event, and allow them to view, edit and cancel those bookings as needed.
+* The internal user goal is to provide a way for event staff to view those bookings.
+* The site is targeted at the organisers of a pop-up restaurant. It provides a way for them to gather bookings online and to view the information provided by those booking.
 
 ADD LIVE VERSION LINK HERE
 * The live version can be accessed here: 
 
 ADD IMAGES ON DIFFERENT SCREEN SIZES. 
-![Live version welcome message](docs/initial.png)
+![Live version welcome message]()
 
 ## AGILE Methodology
 
 ### MILESTONES - EPICS - SPRINTS
 
+* An Agile approach was taken. Possible features were listed and evaluated based on the value they could provide to the user, and their feasibility in terms of time and resources.
+* An initial milestone was set on Github for target of minimum functionality.
+* Due to the limited time available for completion of the project, only one sprint (5 days) was completed. 
+* Work items that were not listed as part of the first sprint, deemed not being crucial for minimum functionality, were moved to a Product Backlog also on Github.
+* All items that were part of the completed sprint were converted into User Stories and managed on the Github Kanban board.  
+* User Stories that could not be achieved during the sprint were moved back to the Product Backlog, to be evaluated and prioritised before any next sprint begins.
+
 ### USER STORIES - ACCEPTANCE CRITERIA - TASKS
+
+* Github Kanban board: User Stories were moved from 'To-do' to 'In Progress' to 'Complete' as work progressed.
+* ACCEPTANCE CRITERIA
+* TASKS
+
+## UI
+
+*
+
+### Wireframes
+### Typography and Color
+### Accessibility
+
+INSERT HERE
 
 ## Features
 
-ADD CURRENT FEATURES
+ADD CURRENT FEATURES WITH PICTURES
 
 
 ### Future Features
+
 ADD FUTURE FEATURES HERE
 * 
 
@@ -35,30 +56,42 @@ ADD FUTURE FEATURES HERE
 * INSERT INFO HERE
 * BOOKING MODEL ATTRIBUTES: INSERT HERE
 
-#### OTHER MODEL/CLASS INFO HERE
+### OTHER MODEL/CLASS INFO HERE
 
 
 
-## Entity Relationship Diagram (ERD)
+### Entity Relationship Diagram (ERD)
 
-CHECK NAME ABOVE IS CORRECT. INSERT DIAGRAM BELOW.
-The program algorithm is as laid out in the flowchart below.
+REMOVE ONE DIAGRAM BELOW
+The Models user in this project were mapped out as in the Entity Relationship Diagram below.
 
-![flowchart](docs/flowchart.png)
+![entity relationship diagram](static/images/erd-event-user-booking.png)
+![entity relationship diagram2](static/images/erd-user-booking.png)
 
 ## Technology
-ADD TECHNOLOGY
+ADD TECHNOLOGY - CHECK INSTALLED PACKAGES IN REQUIREMENTS
 * Heroku was used to deploy the program.
-* 
 * Gitpod was used for editing.
 * Github was used for storing and sharing the repository. 
-* LucidChart was used to create the Entity Relationship Diagram (ERD). CHECK CORRECT NAME
+* LucidChart was used to create the Entity Relationship Diagram (ERD). 
+* Bootstrap was used to style the pages.
+* ElephantSQL was used to store the database once deployed.
+* Cloudinary was used to store static files once deployed.
+* Github was used to manage workflow according to Agile principles.
 
 ## Testing
 
 ### Code Validation
 NEED TO COMPLETE
-* Code was passed through the [Code Institute Python Linter](https://pep8ci.herokuapp.com/) without any issues.
+* PYTHON: Code was passed through the [Code Institute Python Linter](https://pep8ci.herokuapp.com/) without any issues.
+* HTML: 
+* CSS: 
+
+### Other Testing
+
+ADD INFORMATION HERE. INCLUDE SITE AND RESULTS.
+* Responsiveness: 
+* Cross-browser compatibility: 
 
 ### Test Cases
 ADD TEST CASE

@@ -1,6 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
+{% if messages %}
+<ul class="messages alert alert-success">
+    {% for message in messages %}
+    <li class="{{ message.tags }}">{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
 <div class="container-fluid text-center">
     <h1>My Bookings</h1>
 
