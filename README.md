@@ -9,8 +9,6 @@
 ADD LIVE VERSION LINK HERE
 * The live version can be accessed here: 
 
-ADD IMAGES ON DIFFERENT SCREEN SIZES. 
-![Live version welcome message]()
 
 ## AGILE Methodology
 
@@ -28,8 +26,6 @@ ADD IMAGES ON DIFFERENT SCREEN SIZES.
 * Github Kanban board: User Stories were moved from 'To-do' to 'In Progress' to 'Complete' as work progressed.
 
 ## UX
-
-*
 
 ### Wireframes
 
@@ -61,22 +57,15 @@ ADD IMAGES ON DIFFERENT SCREEN SIZES.
 ![View bookings page](static/images/view-bookings.png)
 
 
-### Typography and Color
-
-
-### Accessibility
-
-INSERT HERE
-
 ## Features
 
 * Features were added to provide the user with CRUD (Create, Read, Update, Delete) functionality. After logging in, the user can create a booking, read/view it, update it and delete it. 
 * The admin user can create, read/view, update and delete bookings and events. 
 
-ADD CURRENT FEATURES WITH PICTURES
 ### Home Page
 
-* The home page has a large title and shows any active or upcoming events. 
+* The home page displays upcoming event information on cards. 
+* Each event appears on a different card and has a 'Book Now' option.  
 
 ### Navigation Bar
 
@@ -89,21 +78,25 @@ ADD CURRENT FEATURES WITH PICTURES
 * The navigation buttons collapse into one drop-down button on small screens. 
 
 ### Sign In, Log in and Log out
+
 * The sign in, log in and log out pages use the templates provided by Django with a little modification.
 * The navigation bar options shown to the user change depending on whether a user is logged-in or logged-out. Users must be authenticated in order to make, view, edit or cancel bookings.
 * The sign in and log in form inputs use built-in Django validation to check that the user enters a suitable password and username. 
  
 ### Home page
+
 * The home page features event information displayed on cards. 
 * If a user wishes to book an event, they can click on the 'Book now' button on the event card. If that user is not already logged in, they will be directed to a log in page. 
 
 ### My Bookings
+
 * The details of any bookings made by the user are displayed in a list on the page.
 * There are two buttons under each booking: 'Edit' and 'Cancel'. 
 * Clicking on the 'Edit' button directs the user to the 'Edit booking' form.
 * Clicking on 'Cancel' directs the user to the 'Cancel booking' page.
 
 ### Book a Table
+
 * The form on the 'Book a Table' page allows the user to book places at one of the pop-up restaurant events.
 * The user must be logged in to view this page.
 * A drop-down menu allows the user to select the number of guests in their group. 
@@ -111,11 +104,13 @@ ADD CURRENT FEATURES WITH PICTURES
 * An alert will show if their booking has been successful.
 
 ### Edit Booking
+
 * The form on the 'Edit Booking' page allows the user to edit their booking.
 * The user can change the number of guests that will attend the event with them.
 * When the user clicks 'Submit', they are brought back to the 'My Bookings' page where an alert tells them that their booking has been successfully updated.
 
 ### Cancel Booking 
+
 * There is a 'Cancel' button next to each booking listed on the 'My Bookings' page.
 * When a user clicks on 'Cancel', they are brought to the 'Cancel Booking' page where they can cancel their booking.
 * They are asked if they are sure about cancelling and are given the opportunity to click, 'Cancel' or 'No'.
@@ -123,21 +118,26 @@ ADD CURRENT FEATURES WITH PICTURES
 
 
 ### Admin Features
+
 * Admin staff for the restaurant can access the admin dashboard by adding '/admin' to the home page URL. 
 * On the dashboard, they have options to create, view, edit, and delete both bookings and events. 
-* They can also view, edit, create and delete user information.
+* They can also view, edit, create and delete user information. 
 
 
 ## Future Features
 
 * The Admin User will be able to add the number of seats when they create an event. If a user tries to book seats when there are no longer enough available, they will be added to a waiting list. 
+* The details of any event added by the admin user will appear on a card on the home page. Site users will be able to click a 'Book now' link under each of these events.
+
 
 ## Data Model
 
 ### Booking Model
+
 * Attributes were added to the Booking model as follows: guest (logged-in user), event (a foreign key connecting a particular booking to a particular event), booked_on (the day and time of booking), last_edited_on (the day and time of the most recent change to the booking), num_of_guests (the number of people who will attend as part of the same booking). 
 
 ### Event Model
+
 * Attributes were added to the Event model as follows: event_name (the name of the event instance), created-on (the date the event instance was created by admin), and event_date (the date that the event is to take place).
 
 ### Entity Relationship Diagram (ERD)
@@ -169,33 +169,39 @@ The Models used in this project were mapped out as in the Entity Relationship Di
 * Mockplus was used to create wireframes.
 * Allauth was used for log-in, log-out, and sign-up authentication. 
 
+
 ## Testing
 
 ### Code Validation
 
-* PYTHON: Code was passed through the [Code Institute Python Linter](https://pep8ci.herokuapp.com/). No issues were found.
+* Python code was passed through the [Code Institute Python Linter](https://pep8ci.herokuapp.com/). No issues were found.
 
-* HTML: HTML code in the template files was validated using the [W3 Validator](https://validator.w3.org/nu/). No errors were found. 
+* HTML code in the template files was validated using the [W3 Validator](https://validator.w3.org/nu/). No errors were found. 
 
-* CSS: NEED TO ADD
+* CSS code was validated using the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator).
 
 ### Other Testing
 
-ADD INFORMATION HERE. INCLUDE SITES AND RESULTS.
-* Responsiveness: 
-* Cross-browser compatibility: 
 * This app was tested for responsiveness using the Google Chrome browser and Chrome DevTools. It has not yet been tested on other browsers.
 
 ### Test Cases
-ADD TEST CASE
-1. Open the live app. The user is shown... The user notices ...
-2. 
 
-![Home page]()
+#### Test Case 1
+
+1. Open the live app. The user is shown a home page with a large 'Pop-up Restaurant' heading and a card showing the details of an upcoming event. The user notices that there is a 'Book now' button.
+2. Click 'Book now'. The user has not logged in so they are directed to a 'Log In' page. The user is not yet registered on the app. The user notices a 'Sign Up' link above the form.
+3. Click 'Sign Up'. The user is directed to the Sign Up page. The user notices a form asking for their details.
+4. Enter username, email address and password twice. The passwords do not match or do not meet the requirements. The user notices a message appear directing them to re-enter their password.
+5. Enter password correctly. The user notices a 'Submit' button beneath the form.
+6. Click 'Submit'. The user is directed to a 'My Bookings' page where an alert tells them that they have successfully registered. The user notices that they now have a 'Book a Table' option in the navigation bar.
+7. Click 'Book a table'. The user is directed to the booking page. The user notices a form asking for the number of guests. 
+8. Enter number of guests. The user notices a 'Submit' button beneath the form.
+9. Click 'Submit'. The user is directed to the 'My Bookings' page where an alert tells them that they have successfully booked seats at the event.
 
 
 ### Fixed Bugs
-* 
+
+* On smaller screens, the large heading on the home page caused the navigation bar and cards to become small and move to the left. This was fixed by adding a media query for the heading to shrink it on smaller screens.
 
 ### Remaining Bugs
 
@@ -218,8 +224,6 @@ ADD TEST CASE
 
 ### Via Heroku
 
-CHECK AND ADD DEPLOYMENT PROCESS
-
 The program was deployed using Heroku by doing the following:
 
 1. Go to http://github.com.
@@ -241,5 +245,5 @@ The program was deployed using Heroku by doing the following:
 
 ## Credits
 
-* The template used was created by Code Institute.
+* The initial template used to build the project was the ci-full-template provided for project use by Code Institute.
 

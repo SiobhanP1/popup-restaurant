@@ -36,7 +36,7 @@ class Booking(models.Model):
         ordering = ['-booked_on']
 
     def __str__(self):
-        return f"{self.guest} booked {self.event.event_name}"
+        return f"{self.guest} booked {self.event}"
 
     def get_absolute_url(self):
         return reverse('bookings')
