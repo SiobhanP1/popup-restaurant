@@ -30,5 +30,9 @@ li {
     list-style-type: none;
 }
 
+/* Media query for phones of up to 370px screen width */
 
+.home-main-heading {
+    font-size: 2rem;
+}
 

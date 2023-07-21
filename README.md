@@ -2,7 +2,6 @@
 
 ## Purpose
 
-ADD PURPOSE INFO - INTERNAL AND EXTERNAL USER
 * The external user goal is to provide a way for people to carry out bookings for a pop-up restaurant event, and allow them to view, edit and cancel those bookings as needed.
 * The internal user goal is to provide a way for event staff to view those bookings.
 * The site is targeted at the organisers of a pop-up restaurant. It provides a way for them to gather bookings online and to view the information provided by those booking.
@@ -24,17 +23,42 @@ ADD IMAGES ON DIFFERENT SCREEN SIZES.
 * All items that were part of the completed sprint were converted into User Stories and managed on the Github Kanban board.  
 * User Stories that could not be achieved during the sprint were moved back to the Product Backlog, to be evaluated and prioritised before any next sprint begins.
 
-### USER STORIES - ACCEPTANCE CRITERIA - TASKS
+### USER STORIES
 
 * Github Kanban board: User Stories were moved from 'To-do' to 'In Progress' to 'Complete' as work progressed.
-* ACCEPTANCE CRITERIA
-* TASKS
 
-## UI
+## UX
 
 *
 
 ### Wireframes
+
+#### Home Page
+
+![Hero image and navigation on home page](static/images/home-top-of-page.png)
+![Event card and footer on home page](static/images/home-under-hero-image.png)
+
+#### Log In and Sign up Pages
+
+![Log in page](static/images/log-in-page.png)
+![Sign up page](static/images/register-page.png)
+
+#### Successful Log In and Registration Alerts
+
+![Successful log in](static/images/successful-login.png)
+![Successful registration](static/images/successful-registration.png)
+
+#### Booking Page
+
+![Book a table page](static/images/booking-page.png)
+
+#### Successful Booking Alert
+
+![Successful booking](static/images/successful-booking.png)
+
+#### View Bookings Page
+
+![View bookings page](static/images/view-bookings.png)
 
 
 ### Typography and Color
