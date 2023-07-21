@@ -18,9 +18,9 @@
     <!--Navigation bar at top of page-->
     <nav class="navbar navbar-expand-sm bg-light navbar-light">
         <div class="">
-            <a href="{% url 'home' %}" class="navbar-brand">Home</a>
+            <a href="{% url 'home' %}" class="navbar-brand"><i class="fa-solid fa-utensils"></i></a>
             <button type="button" data-toggle="collapse" data-target="#navDropDown" class="navbar-toggler ml-auto"
-                aria-controls="navDropDown" aria-expanded="false" aria-label="toggle navigation">Button</button>
+                aria-controls="navDropDown" aria-expanded="false" aria-label="toggle navigation"><i class="fa-solid fa-bars"></i></button>
         </div>
         <div class="collapse navbar-collapse" id="navDropDown">
             <ul class="navbar-nav mr-auto">
@@ -45,7 +45,7 @@
             </ul>
         </div>
     </nav>
-    
+
     <section>
         {% block content %}
         {% endblock %}
@@ -57,6 +57,9 @@
             <p>Contact us at 089 123 4567 or popuprestaurant@gmail.com</p>
         </div>
     </footer>
+
+    <!--Font Awesome script-->
+    <script src="https://kit.fontawesome.com/6189b95449.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
