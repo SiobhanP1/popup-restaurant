@@ -138,19 +138,26 @@ ADD CURRENT FEATURES WITH PICTURES
 * Attributes were added to the Booking model as follows: guest (logged-in user), event (a foreign key connecting a particular booking to a particular event), booked_on (the day and time of booking), last_edited_on (the day and time of the most recent change to the booking), num_of_guests (the number of people who will attend as part of the same booking). 
 
 ### Event Model
-
-
+* Attributes were added to the Event model as follows: event_name (the name of the event instance), created-on (the date the event instance was created by admin), and event_date (the date that the event is to take place).
 
 ### Entity Relationship Diagram (ERD)
 
-REMOVE ONE DIAGRAM BELOW
 The Models used in this project were mapped out as in the Entity Relationship Diagram below.
 
 ![entity relationship diagram](static/images/erd-event-user-booking.png)
-![entity relationship diagram2](static/images/erd-user-booking.png)
+
+
+## Views
+
+* All views are class-based, a decision that allowed use of inheritance.
+
+## Templates
+
+* A base template was created to store the navigation bar and footer which appears on each page. All other templates extend this base template.
+* The log-in, log-out and sign-up pages use the Allauth templates, with the addition of the navigation bar and footer from the base template.
 
 ## Technology
-ADD TECHNOLOGY - CHECK INSTALLED PACKAGES IN REQUIREMENTS
+
 * Heroku was used to deploy the program.
 * Gitpod was used for editing.
 * Github was used for storing and sharing the repository. 
@@ -159,13 +166,14 @@ ADD TECHNOLOGY - CHECK INSTALLED PACKAGES IN REQUIREMENTS
 * ElephantSQL was used to store the database once deployed.
 * Cloudinary was used to store static files once deployed.
 * Github was used to manage workflow according to Agile principles.
+* Mockplus was used to create wireframes.
+* Allauth was used for log-in, log-out, and sign-up authentication. 
 
 ## Testing
 
 ### Code Validation
-NEED TO COMPLETE -PYTHON, CSS NOT COMPLETE
 
-* PYTHON: Code was passed through the [Code Institute Python Linter](https://pep8ci.herokuapp.com/). NOT COMPLETE YET
+* PYTHON: Code was passed through the [Code Institute Python Linter](https://pep8ci.herokuapp.com/). No issues were found.
 
 * HTML: HTML code in the template files was validated using the [W3 Validator](https://validator.w3.org/nu/). No errors were found. 
 
@@ -190,6 +198,8 @@ ADD TEST CASE
 * 
 
 ### Remaining Bugs
+
+* The decision to use class-based views proved challenging and there are a number of issues that I could not provide a solution for within the alloted time.
 
 * The 'event' attribute in the Booking model is a foreign key linking the Booking object to the Event object. I initially added it as a Foreign Key but needed to add a default value and did not succeed in doing so without creating a different error. (I attempted to use the `get_or_create` method to create the default value.) As a result, and until I can fix this bug, the 'event' attribute has the value "Green Square Gardens" and the event name is not editable through the admin dashboard.
 

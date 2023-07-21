@@ -1,7 +1,6 @@
 from django.views import View, generic
 from .models import Booking, Event
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.views.generic.detail import SingleObjectMixin #remove 
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib import messages
 from django.urls import reverse_lazy
@@ -22,13 +21,6 @@ class ViewBookings(LoginRequiredMixin, generic.ListView):
     paginate_by = 5
 
 
-    #def get_object(self, queryset=None):
-
-    #    current_user_id=self.request.user.id
-    #    #return super().get_object().filter(Booking.guest.id==current_user_id)
-    #    return Booking.objects.filter(Booking.guest.id==current_user_id)
-
-
 class MakeBooking(LoginRequiredMixin, CreateView):
 
     model = Booking
@@ -40,25 +32,18 @@ class MakeBooking(LoginRequiredMixin, CreateView):
         form.instance.guest = self.request.user
         messages.success(self.request, "Successfully booked.")
         return super(MakeBooking, self).form_valid(form)
-    
+
 
 class EditBooking(LoginRequiredMixin, UpdateView):
 
     model = Booking
     fields = ['num_of_guests']
     template_name = 'editbooking.html'
-    
 
     def form_valid(self, form):
         form.instance.guest = self.request.user
         messages.success(self.request, "Successfully updated.")
         return super(EditBooking, self).form_valid(form)
-
-
-    #def get_object(self, queryset=None):
-
-    #    current_user_id=self.request.user.id 
-    #    return Booking.objects.filter(id=current_user_id)
 
 
 class CancelBooking(LoginRequiredMixin, DeleteView):
