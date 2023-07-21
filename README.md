@@ -6,8 +6,7 @@
 * The internal user goal is to provide a way for event staff to view those bookings.
 * The site is targeted at the organisers of a pop-up restaurant. It provides a way for them to gather bookings online and to view the information provided by those booking.
 
-ADD LIVE VERSION LINK HERE
-* The live version can be accessed here: 
+* The live version can be accessed here: https://popup-restaurant-booking-6b35de1eb8e5.herokuapp.com/
 
 
 ## AGILE Methodology
@@ -232,16 +231,12 @@ The program was deployed using Heroku by doing the following:
 4. Select 'Create app'.
 5. Give the app a unique name.
 6. Go to 'Settings'.
-7. Click 'Reveal Config Vars'.
-8. Under 'key', add 'CREDS'. Under 'value', copy and paste the content of the 'creds.json' in the repository.
-9. Go to 'Add Buildpacks'. 
-10. Add 'Python' and 'Save Changes'.
-11. Add 'NodeJS' and 'Save Changes'.
-12. Go to 'Deploy' and then 'Deployment Method'.
-13. Select 'Connect to Github'.
-14. Enter the repository name.
-15. Select 'Manual Deploy'. 
-16. Click 'Deploy'.
+7. Click 'Reveal Config Vars' and add.
+9. Go to 'Deploy' and then 'Deployment Method'.
+10. Select 'Connect to Github'.
+11. Enter the repository name.
+12. Select 'Manual Deploy'. 
+13. Click 'Deploy'.
 
 ## Credits
 
